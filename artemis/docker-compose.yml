@@ -1,0 +1,77 @@
+services:
+  artemis-app:
+    image: hung1962003/artemis_app:latest # Container dược xay dựng từ docker image 
+    container_name: artemis-app # tên container
+    volumes:
+      - ./artemis-data:/opt/artemis/data # Dữ liệu đươc lưu trữ artemis-data (/opt/artemis/data  trong container)
+    expose: # các cổng container được mở (không được public và giao tiếp giữa các containercontainer)
+      - "8080"
+      - "5701"
+      - "7921"
+    restart: on-failure:3 # được khởi động lại 3 lần
+    networks: # các mạng mà container sẽ kết nối tới
+      - artemis
+      - athena-network
+    environment: # biến môi trường
+      USE_CRUMB: "false" # tắt security trong jenkins
+      CI_PASSWORD: "artemis_admin" # password của jenkins
+      ARTEMIS-AUTHENTICATION-TOKEN-VALUE: "123456789" # giá trị tùy chọn của Server Notification Token bên jenkins (Secret)
+      ARTEMIS-AUTHENTICATION-TOKEN-KEY: "1f065b41-1250-4b1e-b406-d54b84bb3545" # Id của Server Notification Token bên jenkins(tự động tạo)
+      VCS-CRED: "f619ff0d-cfda-40c1-8abd-736a5a32e2ab" # Id của LocalVC Repository Access bên jenkins(tự động tạo)
+      CI_USER_TOKEN: "" # token của usẻr sau khi login
+      CI_SECRET_PUSH_TOKEN: "" 
+      JENKINS_CI_URL: "http://jenkins-jenkins-1:8080" # internal url của container jenkins giao tiếp với container khác
+      JENKINS_VCS_URL: "http://artemis-app:8080" #  url cua artemis de cho jenkins truy cap vo github 
+      ARTEMIS_SERVER_URL: "http://artemis-app:8080" # url của artemis server
+      ARTEMIS_ATHENA_SECRET: "abcdefg12345"
+      ARTEMIS_ATHENA_URL: "http://assessment_module_manager:5100"
+      ARTEMIS_ATHENA_RESTRICTED_MODULES: "module_text_llm,module_programming_llm" 
+      APOLLON_CONVERSION_SERVICE_URL: "http://apollon-conversion-service:8080"
+      ARTEMIS_USERMANAGEMENT_INTERNALADMIN_PASSWORD: "artemis_admin" # user của jenkins
+      ARTEMIS_USERMANAGEMENT_INTERNALADMIN_USERNAME: "artemis_admin" # password của jenkins
+      ARTEMIS_USERMANAGEMENT_USEEXTERNAL: "false"
+      JHIPSTER_REGISTRY_PASSWORD: "AN-ADMIN-PASSWORD-THAT-MUST-BE-CHANGED (FROM REGISTRY CONFIG)"
+      JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64SECRET: "bXktc2VjcmV0LWtleS13aGljaC1zaG91bGQtYmUtY2hhbmdlZC1pbi1wcm9kdWN0aW9uLWFuZC1iZS1iYXNlNjQtZW5jb2RlZAo="
+      SPRING_DATASOURCE_PASSWORD: "Dh2u22J3xFdjx2g" # password của database(có thể đổi sang local) 
+      SPRING_DATASOURCE_URL: "jdbc:mysql://artemis112.mysql.database.azure.com:3306/artemis" # url của database (có thể đổi sang local)
+      SPRING_DATASOURCE_USERNAME: "trinhan1" # username của database (có thể đổi sang local)
+      SPRING_MAIL_PASSWORD: ""
+      SPRING_MAIL_USERNAME: ""
+      SPRING_PROFILES_ACTIVE: "artemis,scheduling,athena,core,prod,docker,jenkins,localvc"
+      SPRING_WEBSOCKET_BROKER_PASSWORD: "guest"
+      SPRING_WEBSOCKET_BROKER_USERNAME: "guest"
+      ARTEMIS_VERSIONCONTROL_URL: http://artemis-app:8080 # ủrl của version control trong artemis
+
+  nginx:
+    image: docker.io/library/nginx:1.26 # Docker image của nginx
+    container_name: artemis-nginx
+    ports:
+      - "80:80"
+      - "444:444"
+      - "7921:7921"
+    volumes:
+      - ./nginx-config/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx-config/timeouts.conf:/etc/nginx/conf.d/timeouts.conf:ro
+      - ./nginx-config/artemis-nginx.conf:/etc/nginx/conf.d/artemis-nginx.conf:ro
+      - ./nginx-config/artemis-upstream-single-node.conf:/etc/nginx/includes/artemis-upstream.conf:ro
+      - ./nginx-config/artemis-ssh-upstream-single-node.conf:/etc/nginx/includes/artemis-ssh-upstream.conf:ro
+      - ./nginx-config/artemis-server.conf:/etc/nginx/includes/artemis-server.conf:ro
+      - ./nginx-config/dhparam.pem:/etc/nginx/dhparam.pem:ro
+      - ./nginx-config/nginx_503.html:/usr/share/nginx/html/503.html:ro
+      - ./nginx-config/70-artemis-setup.sh:/docker-entrypoint.d/70-artemis-setup.sh:ro
+      - ./nginx-config/artemis-nginx+4.pem:/certs/fullchain.pem:ro
+      - ./nginx-config/artemis-nginx+4-key.pem:/certs/priv_key.pem:ro
+    depends_on:
+      artemis-app:
+        condition: service_started # chỉ khởi động sau khi ảrtemis chạy
+    restart: on-failure:3
+    networks:
+      - artemis
+      - athena-network
+
+networks:
+  artemis: # mạng nội bộ trong Docker, sử dụng driver bridge
+    driver: "bridge"
+    name: artemis
+  athena-network: #Mạng  kết nối từ bên ngoài
+    external: true

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Athena/playground/data/example/exercise-1/submissions/103/103.iml" filepath="$PROJECT_DIR$/Athena/playground/data/example/exercise-1/submissions/103/103.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Athena/modules/programming/module_programming_apted/module_programming_apted.iml" filepath="$PROJECT_DIR$/Athena/modules/programming/module_programming_apted/module_programming_apted.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Athena/modules/programming/module_programming_themisml/module_programming_themisml.iml" filepath="$PROJECT_DIR$/Athena/modules/programming/module_programming_themisml/module_programming_themisml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Athena/playground/data/example/exercise-1/solution/solution.iml" filepath="$PROJECT_DIR$/Athena/playground/data/example/exercise-1/solution/solution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Athena/playground/data/example/exercise-1/submissions/submissions.iml" filepath="$PROJECT_DIR$/Athena/playground/data/example/exercise-1/submissions/submissions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Athena/playground/data/example/exercise-1/template/template.iml" filepath="$PROJECT_DIR$/Athena/playground/data/example/exercise-1/template/template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/test-artemis.iml" filepath="$PROJECT_DIR$/.idea/test-artemis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Athena/playground/data/example/exercise-1/tests/tests.iml" filepath="$PROJECT_DIR$/Athena/playground/data/example/exercise-1/tests/tests.iml" />
+    </modules>
+  </component>
+</project>
