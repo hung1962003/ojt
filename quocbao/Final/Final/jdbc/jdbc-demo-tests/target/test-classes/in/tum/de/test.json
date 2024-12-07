@@ -1,0 +1,12 @@
+[{
+  "class" : {
+    "name" : "Exercise",
+    "package" : "in.tum.de"
+  },
+
+  "methods" : [ {
+    "name" : "result",
+    "modifiers" : [ "public" ],
+    "returnType" : "String"
+  }]
+}]

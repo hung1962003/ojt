@@ -1,0 +1,100 @@
+[
+  {
+    "class": {
+      "name": "Exercise",
+      "package": "in.tum.de"
+    },
+    "methods": [
+      {
+        "name": "insertTable",
+        "modifiers": [
+          "public"
+        ],
+        "parameters" : [ "Connection" ],
+        "returnType": "void"
+      },
+      {
+        "name": "insertUser",
+        "modifiers": [
+          "public"
+        ],
+        "parameters" : [ "String","String","String","String","String","Connection" ],
+        "returnType": "void"
+      },
+      {
+        "name": "selectUserByName",
+        "modifiers": [
+          "public"
+        ],
+        "parameters" : [ "String","Connection" ],
+        "returnType": "String"
+      },
+      {
+        "name": "updateUser",
+        "modifiers": [
+          "public"
+        ],
+        "returnType": "void"
+      },
+      {
+        "name": "getAllUsers",
+        "modifiers": [
+          "public"
+        ],
+        "returnType": "String"
+      },
+      {
+        "name": "deleteUser",
+        "modifiers": [
+          "public"
+        ],
+        "returnType": "void"
+      },
+      {
+        "name": "getUserById",
+        "modifiers": [
+          "public"
+        ],
+        "returnType": "String"
+      }
+    ]
+  },
+  {
+    "class": {
+      "name": "ConnectionUtils",
+      "package": "in.tum.de"
+    },
+    "methods": [
+      {
+        "name": "getConnection",
+        "modifiers": [
+          "public"
+        ],
+        "returnType": "Connection"
+      }
+    ],
+    "attributes": [
+      {
+        "name": "JDBC_URL",
+        "modifiers": [
+          "private static final"
+        ],
+        "type": "String"
+      },
+      {
+        "name": "JDBC_USER",
+        "modifiers": [
+          "private static final"
+        ],
+        "type": "String"
+      },
+      {
+        "name": "JDBC_PASSWORD",
+        "modifiers": [
+          "private static final"
+        ],
+        "type": "String"
+      }
+    ]
+  }
+]

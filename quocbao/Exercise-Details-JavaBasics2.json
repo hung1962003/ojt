@@ -1,0 +1,144 @@
+{
+  "type": "programming",
+  "id": 15,
+  "title": "JavaBasics2",
+  "shortName": "JavaBasics2",
+  "maxPoints": 100.0,
+  "bonusPoints": 0.0,
+  "assessmentType": "AUTOMATIC",
+  "mode": "INDIVIDUAL",
+  "allowComplaintsForAutomaticAssessments": false,
+  "allowFeedbackRequests": false,
+  "includedInOverallScore": "INCLUDED_COMPLETELY",
+  "problemStatement": "# Select Test\r\n\nIn this exercise, we want to implement Adding and choose them based on runtime specific variables.\n\n### Part 1: Select\n\n**You have the following tasks:**\n\n1. [task][Implement Select](testFood)\n\nImplement the method `Result()` in the class `Exercise`. Make sure to follow the Bubble Sort algorithm exactly.",
+  "presentationScoreEnabled": false,
+  "secondCorrectionEnabled": false,
+  "course": {
+    "id": 1,
+    "title": "New Course To Test",
+    "description": "hahahhahaahahhahahahaa",
+    "shortName": "LibraryManagement",
+    "studentGroupName": "artemis-dev",
+    "teachingAssistantGroupName": "artemis-dev",
+    "editorGroupName": "artemis-dev",
+    "instructorGroupName": "artemis-dev",
+    "startDate": "2024-11-14T02:44:00Z",
+    "endDate": "2031-02-28T02:44:00Z",
+    "semester": "WS18/19",
+    "testCourse": false,
+    "defaultProgrammingLanguage": "JAVA",
+    "onlineCourse": false,
+    "courseInformationSharingConfiguration": "COMMUNICATION_AND_MESSAGING",
+    "courseInformationSharingMessagingCodeOfConduct": "<!-- Code of Conduct Template: Adapt to your demands -->\r\n<!-- Important: This template will directly be shown on the iOS and Android client if a course has no explicit code of conduct set. -->\r\n\r\nWe as students, tutors, and instructors pledge to make participation in our course a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.\r\n\r\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.\r\n\r\n## Our Standards\r\n\r\n### Examples of behavior that contributes to a positive environment for our community include:\r\n\r\n- Demonstrating empathy and kindness toward other people\r\n- Being respectful of differing opinions, viewpoints, and experiences\r\n- Giving and gracefully accepting constructive feedback\r\n- Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\r\n- Focusing on what is best not just for us as individuals, but for the overall community\r\n\r\n### Examples of unacceptable behavior include:\r\n\r\n- The use of sexualized language or imagery, and sexual attention or advances of any kind\r\n- Trolling, insulting or derogatory comments, and personal or political attacks\r\n- Public or private harassment\r\n- Publishing others' private information, such as a physical or email address, without their explicit permission\r\n- Other conduct which could reasonably be considered inappropriate in a professional setting\r\n\r\n## Scope\r\n\r\nThis Code of Conduct applies within all messages channels.\r\n\r\n## Reporting\r\n\r\nEach course is represented by instructors. If you see inappropriate behavior or content, please report it.\r\nYou may find a list of contacts responsible for this course below.\r\n\r\n<!-- The responsible users are automatically compiled from the course's instructors -->\r\n",
+    "maxComplaints": 3,
+    "maxTeamComplaints": 3,
+    "maxComplaintTimeDays": 7,
+    "maxRequestMoreFeedbackTimeDays": 7,
+    "maxComplaintTextLimit": 2000,
+    "maxComplaintResponseTextLimit": 2000,
+    "enrollmentEnabled": false,
+    "unenrollmentEnabled": false,
+    "faqEnabled": true,
+    "maxPoints": 100000,
+    "accuracyOfScores": 1,
+    "restrictedAthenaModulesAccess": false,
+    "learningPathsEnabled": false,
+    "studentCourseAnalyticsDashboardEnabled": false,
+    "requestMoreFeedbackEnabled": true,
+    "complaintsEnabled": true
+  },
+  "plagiarismDetectionConfig": {
+    "continuousPlagiarismControlEnabled": false,
+    "continuousPlagiarismControlPostDueDateChecksEnabled": false,
+    "continuousPlagiarismControlPlagiarismCaseStudentResponsePeriod": 7,
+    "similarityThreshold": 90,
+    "minimumScore": 0,
+    "minimumSize": 50
+  },
+  "testRepositoryUri": "http://localhost:8080/git/WELCOMETOMYCHANELJAVABASICS2/welcometomychaneljavabasics2-tests.git",
+  "allowOnlineEditor": false,
+  "allowOfflineIde": true,
+  "allowOnlineIde": false,
+  "staticCodeAnalysisEnabled": false,
+  "programmingLanguage": "JAVA",
+  "packageName": "in.tum.de",
+  "showTestNamesToStudents": false,
+  "testCasesChanged": false,
+  "projectKey": "WELCOMETOMYCHANELJAVABASICS2",
+  "projectType": "PLAIN_MAVEN",
+  "releaseTestsWithExampleSolution": false,
+  "buildConfig": {
+    "id": 15,
+    "sequentialTestRuns": false,
+    "branch": "main",
+    "buildPlanConfiguration": "{\"api\":\"v0.0.1\",\"metadata\":{\"docker\":{\"image\":\"ls1tum/artemis-maven-template:java17-21\",\"parameters\":[\"--cpus\",\"\\\"2\\\"\",\"--memory\",\"\\\"2g\\\"\",\"--memory-swap\",\"\\\"2g\\\"\",\"--pids-limit\",\"\\\"1000\\\"\"]}},\"actions\":[{\"name\":\"maven\",\"results\":[{\"name\":\"junit\",\"path\":\"**/target/surefire-reports/*.xml\",\"type\":\"junit\",\"before\":false}],\"runAlways\":false,\"script\":\"mvn clean test\"}],\"results\":[{\"name\":\"junit\",\"path\":\"**/target/surefire-reports/*.xml\",\"type\":\"junit\",\"before\":false}],\"scriptActions\":[{\"name\":\"maven\",\"results\":[{\"name\":\"junit\",\"path\":\"**/target/surefire-reports/*.xml\",\"type\":\"junit\",\"before\":false}],\"runAlways\":false,\"script\":\"mvn clean test\"}]}",
+    "buildScript": "#!/usr/bin/env bash\nset -e\n\nmaven () {\n  echo '⚙️ executing maven'\n  mvn clean test\n}\n\nmain () {\n  maven\n}\n\nmain \"${@}\"\n",
+    "checkoutSolutionRepository": false,
+    "timeoutSeconds": 0,
+    "testwiseCoverageEnabled": false,
+    "allowBranching": false,
+    "windfile": {
+      "api": "v0.0.1",
+      "metadata": {
+        "docker": {
+          "image": "ls1tum/artemis-maven-template:java17-21",
+          "parameters": [
+            "--cpus",
+            "\"2\"",
+            "--memory",
+            "\"2g\"",
+            "--memory-swap",
+            "\"2g\"",
+            "--pids-limit",
+            "\"1000\""
+          ]
+        }
+      },
+      "actions": [
+        {
+          "name": "maven",
+          "results": [
+            {
+              "name": "junit",
+              "path": "**/target/surefire-reports/*.xml",
+              "type": "junit",
+              "before": false
+            }
+          ],
+          "runAlways": false,
+          "script": "mvn clean test"
+        }
+      ],
+      "results": [
+        {
+          "name": "junit",
+          "path": "**/target/surefire-reports/*.xml",
+          "type": "junit",
+          "before": false
+        }
+      ],
+      "scriptActions": [
+        {
+          "name": "maven",
+          "results": [
+            {
+              "name": "junit",
+              "path": "**/target/surefire-reports/*.xml",
+              "type": "junit",
+              "before": false
+            }
+          ],
+          "runAlways": false,
+          "script": "mvn clean test"
+        }
+      ]
+    }
+  },
+  "type": "programming",
+  "exerciseType": "PROGRAMMING",
+  "defaultTestCaseVisibility": "ALWAYS",
+  "studentAssignedTeamIdComputed": false,
+  "gradingInstructionFeedbackUsed": false,
+  "visibleToStudents": true,
+  "teamMode": false
+}

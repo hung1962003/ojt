@@ -1,0 +1,132 @@
+{
+  "type" : "programming",
+  "id" : 4,
+  "title" : "JDBC",
+  "shortName" : "JDBC",
+  "maxPoints" : 100.0,
+  "bonusPoints" : 0.0,
+  "assessmentType" : "AUTOMATIC",
+  "releaseDate" : "2024-11-15T13:39:00Z",
+  "startDate" : "2024-11-15T13:39:00Z",
+  "dueDate" : "2024-12-24T13:39:00Z",
+  "exampleSolutionPublicationDate" : "2024-12-24T13:39:00Z",
+  "difficulty" : "MEDIUM",
+  "mode" : "INDIVIDUAL",
+  "allowComplaintsForAutomaticAssessments" : true,
+  "allowFeedbackRequests" : false,
+  "includedInOverallScore" : "INCLUDED_COMPLETELY",
+  "problemStatement" : "# Practice with JDBC\n\nIn this exercise, we want to practice how to make a JDBC connection and query.\n\n### Part 1: Make Connection\n\nFirst, we need to implement three method, in this case `getConnection` and `insertTable` and `insertUser`.\n\n**You have the following tasks:**\n\n1. [task][Implement Get Connection](testCreateTable())\nImplement the method `getConnection()` in the class `ConnectionUtils`. Make sure have exactly connection.\n\n2. [task][Implement Insert Table](testCreateTable())\nImplement the method `insertTable(Connection)` in the class `Exercise`. Make sure to create table\n\n3. [task][Implement Insert User](testCreateTable())\nImplement the method `insertUser(String,String,String,String,String,Connection)` in the class `Exercise`. Make sure to create table\n\n### Part 2: Pratice with simple query\n\nWe want the application to use the query for jdbc correct\n\n**You have the following tasks:**\n\n1. [task][Select User By Name](testSelectUserByName())\nWrite your code in method `selectUserByName(String, Connection)` in class `Exercise` make sure that will return User with sample format:  \n\"ID: 1, Name: Alice Cooper, Address: 101 Orchid Way, Phone Number: 555-0001, Email: alicecooper@example.com, Zip Code: 10001\"\n\n2. [task][Update Name By Id](testDeleteUserById())\nWrite your code in method `deleteUser(Integer, Connection)` in class `Exercise` make sure that will delete the user by id\n\n\n",
+  "presentationScoreEnabled" : false,
+  "secondCorrectionEnabled" : false,
+  "course" : {
+    "id" : 1,
+    "title" : "Learn JAVA Programming - Beginner to Master",
+    "description" : "Deep Dive in Core Java programming -Standard Edition. A Practical approach to learn Java. Become a Java Expert",
+    "shortName" : "Java",
+    "studentGroupName" : "artemis-dev",
+    "teachingAssistantGroupName" : "artemis-dev",
+    "editorGroupName" : "artemis-dev",
+    "instructorGroupName" : "artemis-dev",
+    "startDate" : "2024-10-24T13:12:00Z",
+    "endDate" : "2024-11-26T13:12:00Z",
+    "semester" : "WS25/26",
+    "testCourse" : false,
+    "defaultProgrammingLanguage" : "JAVA",
+    "onlineCourse" : false,
+    "courseInformationSharingConfiguration" : "COMMUNICATION_AND_MESSAGING",
+    "courseInformationSharingMessagingCodeOfConduct" : "<!-- Code of Conduct Template: Adapt to your demands -->\n<!-- Important: This template will directly be shown on the iOS and Android client if a course has no explicit code of conduct set. -->\n\nWe as students, tutors, and instructors pledge to make participation in our course a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.\n\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.\n\n## Our Standards\n\n### Examples of behavior that contributes to a positive environment for our community include:\n\n- Demonstrating empathy and kindness toward other people\n- Being respectful of differing opinions, viewpoints, and experiences\n- Giving and gracefully accepting constructive feedback\n- Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\n- Focusing on what is best not just for us as individuals, but for the overall community\n\n### Examples of unacceptable behavior include:\n\n- The use of sexualized language or imagery, and sexual attention or advances of any kind\n- Trolling, insulting or derogatory comments, and personal or political attacks\n- Public or private harassment\n- Publishing others' private information, such as a physical or email address, without their explicit permission\n- Other conduct which could reasonably be considered inappropriate in a professional setting\n\n## Scope\n\nThis Code of Conduct applies within all messages channels.\n\n## Reporting\n\nEach course is represented by instructors. If you see inappropriate behavior or content, please report it.\nYou may find a list of contacts responsible for this course below.\n\n<!-- The responsible users are automatically compiled from the course's instructors -->\n",
+    "maxComplaints" : 3,
+    "maxTeamComplaints" : 3,
+    "maxComplaintTimeDays" : 7,
+    "maxRequestMoreFeedbackTimeDays" : 7,
+    "maxComplaintTextLimit" : 2000,
+    "maxComplaintResponseTextLimit" : 2000,
+    "courseIcon" : "/api/files/course/icons/1/CourseIcon_2024-10-24T20-14-16-105_cbe7bf95.png",
+    "enrollmentEnabled" : false,
+    "unenrollmentEnabled" : false,
+    "faqEnabled" : true,
+    "maxPoints" : 1000,
+    "accuracyOfScores" : 1,
+    "restrictedAthenaModulesAccess" : false,
+    "learningPathsEnabled" : false,
+    "studentCourseAnalyticsDashboardEnabled" : false,
+    "complaintsEnabled" : true,
+    "requestMoreFeedbackEnabled" : true
+  },
+  "plagiarismDetectionConfig" : {
+    "continuousPlagiarismControlEnabled" : false,
+    "continuousPlagiarismControlPostDueDateChecksEnabled" : false,
+    "continuousPlagiarismControlPlagiarismCaseStudentResponsePeriod" : 7,
+    "similarityThreshold" : 90,
+    "minimumScore" : 0,
+    "minimumSize" : 50
+  },
+  "testRepositoryUri" : "http://localhost:8080/git/JAVAJDBC/javajdbc-tests.git",
+  "allowOnlineEditor" : false,
+  "allowOfflineIde" : true,
+  "allowOnlineIde" : false,
+  "staticCodeAnalysisEnabled" : false,
+  "programmingLanguage" : "JAVA",
+  "packageName" : "in.tum.de",
+  "showTestNamesToStudents" : true,
+  "buildAndTestStudentSubmissionsAfterDueDate" : "2024-10-24T13:39:00Z",
+  "testCasesChanged" : false,
+  "projectKey" : "JAVASORTING",
+  "projectType" : "PLAIN_GRADLE",
+  "releaseTestsWithExampleSolution" : true,
+  "buildConfig" : {
+    "id" : 2,
+    "sequentialTestRuns" : false,
+    "branch" : "main",
+    "buildPlanConfiguration" : "{\"api\":\"v0.0.1\",\"metadata\":{\"docker\":{\"image\":\"ls1tum/artemis-maven-template:java17-21\",\"parameters\":[\"--cpus\",\"\\\"2\\\"\",\"--memory\",\"\\\"2g\\\"\",\"--memory-swap\",\"\\\"2g\\\"\",\"--pids-limit\",\"\\\"1000\\\"\"]}},\"actions\":[{\"name\":\"maven\",\"results\":[{\"name\":\"junit\",\"path\":\"**/target/surefire-reports/*.xml\",\"type\":\"junit\",\"before\":false}],\"runAlways\":false,\"script\":\"mvn clean test\"}],\"results\":[{\"name\":\"junit\",\"path\":\"**/target/surefire-reports/*.xml\",\"type\":\"junit\",\"before\":false}],\"scriptActions\":[{\"name\":\"maven\",\"results\":[{\"name\":\"junit\",\"path\":\"**/target/surefire-reports/*.xml\",\"type\":\"junit\",\"before\":false}],\"runAlways\":false,\"script\":\"mvn clean test\"}]}",
+    "buildScript" : "#!/usr/bin/env bash\nset -e\n\nmaven () {\n  echo '⚙️ executing maven'\n  mvn clean test\n}\n\nmain () {\n  maven\n}\n\nmain \"${@}\"\n",
+    "checkoutSolutionRepository" : false,
+    "timeoutSeconds" : 0,
+    "testwiseCoverageEnabled" : false,
+    "allowBranching" : false,
+    "windfile" : {
+      "api" : "v0.0.1",
+      "metadata" : {
+        "docker" : {
+          "image" : "ls1tum/artemis-maven-template:java17-21",
+          "parameters" : [ "--cpus", "\"2\"", "--memory", "\"2g\"", "--memory-swap", "\"2g\"", "--pids-limit", "\"1000\"" ]
+        }
+      },
+      "actions" : [ {
+        "name" : "maven",
+        "results" : [ {
+          "name" : "junit",
+          "path" : "**/target/surefire-reports/*.xml",
+          "type" : "junit",
+          "before" : false
+        } ],
+        "runAlways" : false,
+        "script" : "mvn clean test"
+      } ],
+      "results" : [ {
+        "name" : "junit",
+        "path" : "**/target/surefire-reports/*.xml",
+        "type" : "junit",
+        "before" : false
+      } ],
+      "scriptActions" : [ {
+        "name" : "maven",
+        "results" : [ {
+          "name" : "junit",
+          "path" : "**/target/surefire-reports/*.xml",
+          "type" : "junit",
+          "before" : false
+        } ],
+        "runAlways" : false,
+        "script" : "mvn clean test"
+      } ]
+    }
+  },
+  "type" : "programming",
+  "exerciseType" : "PROGRAMMING",
+  "defaultTestCaseVisibility" : "ALWAYS",
+  "studentAssignedTeamIdComputed" : false,
+  "gradingInstructionFeedbackUsed" : false,
+  "visibleToStudents" : true,
+  "teamMode" : false
+}
